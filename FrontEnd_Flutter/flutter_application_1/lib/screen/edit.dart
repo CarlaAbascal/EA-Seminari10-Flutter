@@ -18,14 +18,14 @@ class _EditPageState extends State<EditPage> {
   @override
   void initState() {
     super.initState();
-    // Llenamos el formulario con los datos del usuario
+    //Omplir el formulari a,b les dades del user
     registerController.fillFormWithUserData(widget.user);
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Editar Usuari")),
+      appBar: AppBar(title: Text("Editar Usuario")),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(

@@ -25,6 +25,8 @@ class UserCard extends StatelessWidget {
             Text(user.mail),
             const SizedBox(height: 8),
             Text(user.comment ?? "Sin comentarios"),
+
+            //Codi afegit -- Editar usuario
             const SizedBox(height: 16),
             ElevatedButton(
               onPressed: () {

@@ -27,7 +27,7 @@ class _UserPageState extends State<UserPage> {
   @override
   void initState() {
     super.initState();
-    getUsers(); // truquem a la funció per obtenir la llista d'usuaris
+    getUsers(); // obtenir la llista d'usuaris
   }
 
   Future<void> getUsers() async {

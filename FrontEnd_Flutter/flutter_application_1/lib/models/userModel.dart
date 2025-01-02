@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class UserModel with ChangeNotifier {
-  String? _id; // Nou camp: ID
+  String? _id; // Codi afegit -- camp ID
   String _name;
   String _mail;
   String? _password;
@@ -9,7 +9,7 @@ class UserModel with ChangeNotifier {
 
   // Constructor
   UserModel({
-    String? id, // Nou paràmetre: ID
+    String? id, // Nou camp
     required String name,
     required String mail,
     String? password,

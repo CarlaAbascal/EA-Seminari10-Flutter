@@ -13,7 +13,7 @@ class RegisterController extends GetxController {
 
   var isLoading = false.obs;
   var errorMessage = ''.obs;
-  String? userId; // Per emmagatzemar l'ID de l'usuari que s'editarà
+  String? userId; 
 
   /// **Funció per registrar un usuari**
   void signUp() async {
@@ -47,20 +47,20 @@ class RegisterController extends GetxController {
     }
   }
 
-  /// **Funció per omplir el formulari amb dades de l'usuari seleccionat**
+//Codi afegit
+
+  //Funció per omplir el formulari amb dades de l'usuari seleccionat
   void fillFormWithUserData(UserModel user) {
-  // Usamos WidgetsBinding para garantizar que esto se ejecute después del build
   WidgetsBinding.instance.addPostFrameCallback((_) {
     nameController.text = user.name ?? '';
     mailController.text = user.mail ?? '';
     commentController.text = user.comment ?? '';
-    passwordController.text = '';  // Por razones de seguridad, no mostramos la contraseña
-    userId = user.id;  // Asignamos el ID del usuario
+    passwordController.text = '';  
+    userId = user.id;  
   });
 }
 
-
-  /// **Funció per actualitzar un usuari existent**
+  //Funció per actualitzar un usuari existent
   void updateUser() async {
     if (userId == null) return;
 
@@ -94,7 +94,7 @@ class RegisterController extends GetxController {
     }
   }
 
-  /// **Validació de camps**
+  //Validació dels camps
   bool _validateFields() {
     if (nameController.text.isEmpty ||
         mailController.text.isEmpty ||
@@ -113,12 +113,12 @@ class RegisterController extends GetxController {
     return true;
   }
 
-  /// **Funció per netejar el formulari**
+  //Netejar el formulanri
   void clearForm() {
     nameController.clear();
     passwordController.clear();
     mailController.clear();
     commentController.clear();
-    userId = null; // Netejem l'usuari seleccionat
+    userId = null; 
   }
 }
